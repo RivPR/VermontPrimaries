@@ -1,0 +1,17 @@
+{
+  "name": "vermontprimaries",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "async": "^2.6.0",
+    "body-parser": "~1.18.2",
+    "debug": "~2.6.9",
+    "express": "~4.15.5",
+    "express-basic-auth": "^1.1.4",
+    "express-session": "^1.15.6",
+    "oauth": "^0.9.15",
+    "serve-favicon": "~2.4.5"
+  }
+}
