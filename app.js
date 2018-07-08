@@ -6,7 +6,7 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var mongoConnectString = `mongodb://${(process.env.MONGO_HOST || "localhost:27017")}/vt_prim`;
 // create the DB connection
-mongoose.connect(mongoConnectString);
+mongoose.connect(mongoConnectString, { useNewUrlParser: true });
 var db = mongoose.connection;
 
 db.once('open', function(){
@@ -18,7 +18,7 @@ var server = app.listen(process.env.PORT || 8080, function(){
     console.log("App up on... %s...", server.address().port);
 });
 
-//app.use('/', express.static('public'));
+app.use('/2018', express.static('public'));
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
